@@ -8,6 +8,14 @@ The content of this file will be list all the tasks has done. I will update it a
 * Integrate Theme Documents
 * SASS
 
+## v2.1 - March 30th, 2014 - BIG CHANGED
+* NARGA - WordPress Starter Theme was changed to NARGA Basic, change theme URI to new repository `narga-basic` at GitHub and BitBucket.
+* Core functions/features was moved to new project, all new WordPress themes will basing on that.
+* Update ZURB Foundation CSS framework to version 5.2.1
+* Allow custom fonts with Google fonts
+* Fix un-reposive custom header image, allow custom header image as header background.
+* Update topbar function to compatible with new version of ZURB Foundation.
+
 ## v2.0 - February 18th, 2014
 * Update Zurb Foundation v5.1.1 and update styles, scripts path and version information
 * Remove Custom Post Excerpt for better performance and useless

@@ -34,7 +34,7 @@
 <body <?php body_class(); ?>>
 
     <!-- ZURB Foundation Top Bar -->
-    <?php narga_topbar() ?>
+    <?php narga_topbar(); ?>
 
     <!-- Header: include logo, top ads ... -->
     <?php narga_header(); ?>    

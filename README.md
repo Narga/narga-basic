@@ -8,6 +8,11 @@ Because it's a percentage based grid system, it means that it will perfectly ada
 
 I've tested and found that NARGA works well with [bbPress 2.0](http://bbpress.org/) and [BuddyPress 1.5](http://buddypress.org/) but this time it's not official compatible with them.
 
+If you have any questions that are beyond the scope of this help file, 
+please visit narga.net. Thanks so much!
+
+It is completely optional, but if you like the Theme I would appreciate it if you keep the credit link at the bottom.
+
 ### Links of NARGA
 * Homepage          [http://www.narga.net/narga-core][5]
 * Demo              [http://demo.narga.net/][3]
@@ -47,16 +52,20 @@ NARGA inherits all the cool features from ZURB's Foundation CSS Framework, and p
 
 ## Usage
 
-Download **NARGA** WordPress theme then install it on your local WordPress or real website.
+   1. Automatic Installation
+      Go to WP-Admin > Appearance > Themes > Install Themes > Upload and choose the theme zip folder.
 
-This is meant to be a base theme for WordPress custom theme development. A knowledge of WordPress theme development practices as well as understanding of HTML, CSS/LESS, jQuery and PHP are required.
-
-If you want testing the development version, let's clone it from GitHub or BitBucket repositories.
-
-* Extract narga-core.zip and upload the theme folder via FTP to your `wp-content/themes/` directory.
-* Go to your `WordPress Admin Dashboard > Appearance > Themes` then select the NARGA screenshot.
-* Use **Live Preview** of **NARGA** to change the options before active.
-* Because NARGA supported child-theme, You can make your own child theme with highly customizable functions from it.
+   2. Manual Installation
+   Download **NARGA** WordPress theme then install it on your local WordPress or real website.
+   
+   This is meant to be a base theme for WordPress custom theme development. A knowledge of WordPress theme development practices as well as understanding of HTML, CSS/LESS, jQuery and PHP are required.
+   
+   If you want testing the development version, let's clone it from GitHub or BitBucket repositories.
+   
+   * Extract narga-core.zip and upload the theme folder via FTP to your `wp-content/themes/` directory.
+   * Go to your `WordPress Admin Dashboard > Appearance > Themes` then select the NARGA screenshot.
+   * Use **Live Preview** of **NARGA** to change the options before active.
+   * Because NARGA supported child-theme, You can make your own child theme with highly customizable functions from it.
 
 ## License
 

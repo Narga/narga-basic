@@ -1,10 +1,10 @@
 /**
 Theme Name:     NARGA
-Theme URI:      http://github.com/Narga/narga-core/
+Theme URI:      http://github.com/Narga/narga-basic/
 
 Description:    <strong>NARGA</strong> is a versatile HTML5 responsive WordPress theme using on <em>ZURB's Foundation CSS</em>, a powerful tool for building prototypes on any kind of devices. NARGA is <strong>starter theme</strong> that supports child-theme so it'll help you do amazing things faster & easier than ever before. It is a magazine theme with minimalistic style. Suitable for any niche, especially for news or magazine sites. Along with the elegant design the theme is easily customizable with numerous theme options through Theme Customization. Crafted by <a href="http://www.narga.net/" title="NARGA - Ideas and Inspiration">NARGA.NET</a>. Twitter  <a href="http://twitter.com/narga" title="Follow Narga on Twitter"">@narga</a> View <a href="http://demo.narga.net/" title="NARGA Demo">NARGA Demo</a>
 
-Version:        2.0
+Version:        2.1
 
 Tags:           two-columns, blue, fluid-layout, featured-image-header, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, post-formats, sticky-post, responsive-layout
 
@@ -57,10 +57,6 @@ body {
 .size-thumbnail {
 	max-width: 100%;
 	height: auto;
-}
-
-h1, h2, h3, h4, h5, h6, .top-bar a {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
 }
 
 sup, sub {
@@ -123,13 +119,6 @@ form.search-form input[type=text] {
 
 form.search-form input#s:focus {
     width: 150px;
-}
-
-
-.custom-header {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 
 /* 3.0 Main Content */
