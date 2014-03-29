@@ -21,40 +21,9 @@
  * @since NARGA 1.0
  */
 
-/* NARGA Assets */
-// Customizer additions.
-require_once locate_template('/assets/customizer.php' );
-// WordPress Zurb Topbar function.
-require_once locate_template('/assets/topbar.php' );
-// Load Jetpack compatibility file.
-require_once locate_template('/assets/jetpack.php' );
-// Implement the Custom Header feature.
-require_once locate_template('/assets/custom-header.php');
-// Custom functions that cleaning unuse element of HTML, CSS, WordPress.
-require_once locate_template('/assets/cleanup.php');
-// Content related functions to manipulation your post.
-require_once locate_template('/assets/content.php');
-// Post Navigation Control: Breadcrumb, Pagination.
-require_once locate_template('/assets/post-navigation.php');
-// Orbit Slider
-require_once locate_template('/assets/orbit.php');
-
-/**
- * Adjusts content_width value for full-width and single image attachment
- * templates, and when there are no active widgets in the sidebar.
- *
- * @since NARGA v1.3.3
- * @from Twenty Twelve
- */
-if (!isset( $content_width))
-    $content_width = 640;
-function narga_content_width() {
-    if ( is_page_template( 'templates/full-width.php' ) || is_attachment() ) {
-        global $content_width;
-        $content_width = 975;
-    }
-}
-add_action( 'template_redirect', 'narga_content_width' );
+/* NARGA Required Files and Functions */
+require locate_template('core/narga.php');
+new Narga();
 
 /* NARGA Basic Setup */
 function narga_setup() {
@@ -97,7 +66,7 @@ function narga_setup() {
     # Enables post and comment RSS feed links to head
     add_theme_support( 'automatic-feed-links' );
 }
-add_action('after_setup_theme', 'narga_setup');
+add_action('after_setup_theme', 'narga_setup', 10);
 
 /**
  * Enqueue Scripts and Styles for Front-End
@@ -110,15 +79,15 @@ function narga_assets() {
     if ( !is_admin() ) {
       
         # Loads Foundation Main stylesheet
-        wp_enqueue_style( 'foundation', get_template_directory_uri() . '/stylesheets/foundation.min.css', array(), '2014-02-20', 'all' );
+        wp_enqueue_style( 'foundation', get_template_directory_uri() . '/stylesheets/foundation.min.css', array(), '2014-03-30', 'all' );
 
          # Loads our main stylesheet.
-        wp_enqueue_style( 'narga-style', get_stylesheet_uri(), array(), '2013-02-20', 'all' );
+        wp_enqueue_style( 'narga-style', get_stylesheet_uri(), array(), '2013-03-30', 'all' );
 
         # Load JavaScripts
         wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/javascripts/vendor/modernizr.js', array( 'jquery' ), '2.7.1', true );
 
-        wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation.min.js', array( 'jquery' ), '5.1.1', true );
+        wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation.min.js', array( 'jquery' ), '5.2.1', true );
 
         wp_enqueue_script( 'narga', get_template_directory_uri() . '/javascripts/narga.js', array( 'jquery' ), '1.8', true );
 
@@ -130,32 +99,21 @@ function narga_assets() {
 add_action( 'wp_enqueue_scripts', 'narga_assets' );
 
 /**
- * Includes the pro and custom functions if it exists
+ * Adjusts content_width value for full-width and single image attachment
+ * templates, and when there are no active widgets in the sidebar.
  *
- * @since NARGA v1.1
- **/
-locate_template( array( 'assets/pro-functions.php', 'assets/custom-functions.php' ), true, false);
-/* Load custom-actions.php file if it exists in the uploads folder */
-$upload_dir = wp_upload_dir();
-if(!defined('ACTION_FILE'))
-define('ACTION_FILE', $upload_dir['basedir'].'/custom-functions.php');
-if(file_exists(ACTION_FILE))
-    include(ACTION_FILE);
-
-/* Load custom.css file if it exists in the uploads folder */
-define('CSS_FILE', $upload_dir['basedir'].'/custom.css');
-define('CSS_DISPLAY', $upload_dir['baseurl'].'/custom.css');
-if(file_exists(CSS_FILE))
-    add_action("wp_print_styles", "add_custom_css_file", 99);
-function narga_add_custom_css_file() {
-    wp_register_style('narga_custom_css', CSS_DISPLAY);
-    wp_enqueue_style( 'narga_custom_css');
+ * @since NARGA v1.3.3
+ * @from Twenty Twelve
+ */
+if (!isset( $content_width))
+    $content_width = 640;
+function narga_content_width() {
+    if ( is_page_template( 'templates/full-width.php' ) || is_attachment() ) {
+        global $content_width;
+        $content_width = 975;
+    }
 }
+add_action( 'template_redirect', 'narga_content_width' );
 
-/**
- * Theme link to NARGA Help page
- * Since NARGA v1.1
- * (temporaty remove, adding in next version
- **/
 
 ?>
