@@ -23,7 +23,7 @@
 
 /* NARGA Required Files and Functions */
 require locate_template('core/narga.php');
-new Narga();
+new NARGA();
 
 /* NARGA Basic Setup */
 function narga_setup() {

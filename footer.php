@@ -16,7 +16,7 @@
     <!-- Footer area -->
     <footer role="contentinfo" class="row">
     <div id="footer-widgets" class="footer-info hide-for-small">
-    <?php dynamic_sidebar("Footer"); ?>
+    <?php dynamic_sidebar("footer-1"); ?>
     <div class="colophon">
     <hr />
         <div class="large-6 columns">

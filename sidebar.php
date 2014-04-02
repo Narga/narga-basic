@@ -10,8 +10,10 @@
 ?>
 <!-- sidebar -->
 <div class="large-4 column">
+<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
     <aside class="sidebar" role="complementary">
-    <?php dynamic_sidebar("Sidebar"); ?>
+    <?php dynamic_sidebar("sidebar-1"); ?>
     </aside>
+	<?php endif; ?>
 </div>
 <!-- /sidebar -->
