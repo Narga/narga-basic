@@ -37,13 +37,6 @@ if (is_singular()) {
         </nav>      
         <?php 
     }
-    if (narga_options('post_author') == '1') { ?>
-        <div class="post-author">
-            <h3><?php _e('About the Author &#151; ', 'narga'); ?><?php the_author_posts_link(); ?></h3>
-            <div class="post-author-info"><?php echo get_avatar(get_the_author_meta('ID'), '80', '', 'The author avatar');?>
-            <p><?php echo get_the_author_meta("description");?></div>
-        </div>
-        <?php }
 }?>
     </footer>
 </article>
