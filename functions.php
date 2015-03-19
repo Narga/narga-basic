@@ -31,7 +31,7 @@ function narga_setup() {
     load_theme_textdomain('narga', get_template_directory() . '/languages');
 
     # to output valid HTML5.
-    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 
     # Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
