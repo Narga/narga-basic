@@ -81,6 +81,11 @@ pre {
 	line-height: 1.7;
 }
 
+.small {
+    font-size: 0.875em;
+    line-height: 1.35;
+}
+
 /* 1.1. Clearing Float */
 .clearfix:after { 
   content: "."; 
@@ -106,6 +111,7 @@ pre {
 .top-bar a {
     font-weight: 700;
 }
+
 /*  2.1 Top Bar Search Form */
 form.search-form input[type=text] {
     font-size: 12px;
@@ -128,6 +134,10 @@ form.search-form input#s:focus {
 }
 
 /* Breadcrumbs text break */
+.breadcrumbs {
+    margin-top: 22px;
+}
+
 ul.breadcrumbs li {
     word-wrap: break-all !important;
     -ms-word-break:break-all !important;
@@ -237,6 +247,12 @@ figcaption.wp-caption-text {
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
+/* Author's avatar in Author Bio box */
+img.photo {
+    float: right;
+    margin-left: 10px;
+}
+
 /* Responsive images */
 .entry-content img,
 .comment-content img,
@@ -276,7 +292,6 @@ audio:not([controls]) {
 }
 
 /* 3.2 Label Adjustment */
-.tags a {color:#fff;font-weight:normal;}
 
 /* 3.3 Post, Images Navigation */
 section#main nav {
@@ -334,27 +349,18 @@ footer p.post-meta-data {
 }
 
 /* Image posts */
-article.format-image header h2 {
-    text-align: center;
-}
+
 
 /* Link posts */
-article.format-link .link-post-title, article.format-quote .quote-post-title, article.format-status .status-post-title {
+article.format-status .status-post-title {
     font-style: italic;
     font-weight: bold;
     text-transform: uppercase;
+    margin-top: 5px;
 }
 
-article.format-link a.link-post-title:hover, article.format-quote a.quote-post-title:hover, article.format-status a.status-post-title:hover {
-    color: #FFFF99;
-}
-
-article.format-link .entry-content {
-    text-align: left;
-}
-
-article.format-link .entry-content a {
-    font-size: 23px;
+article.format-link article.format-chat {
+    border-bottom: 1px solid #EFEFEF;;
 }
 
 /* Quote posts */
@@ -395,6 +401,9 @@ article.format-aside blockquote:last-child,article.format-aside p:last-child {
 }
 
 /* 4.0 Sidebar Adjustment */
+#sidebar {
+    padding-top:9px;
+}
 div.textwidget {
     line-height: 1.6;
     margin-bottom: 1.25em;
@@ -519,7 +528,8 @@ ul.pagination li span.current, .page-numbers .current {
     font-weight: bold;
     cursor: default;
     display: block;
-    padding: 1px 7px;
+    padding: 0.0625rem 0.625rem;
+    border-radius: 3px;
 }
 
 /* 7.0 Footer */
